@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useGetPostsQuery } from '../features/api/apiSlice';
 import Post from './Post';
+import AddPost from './AddPost';
 
 const Posts = () => {
     const [currentId, setCurrentId] = useState('')
@@ -22,7 +23,7 @@ const Posts = () => {
             }
             {currentId && <Post id={currentId}></Post>}
 
-
+            <AddPost></AddPost>
 
         </div>
     );

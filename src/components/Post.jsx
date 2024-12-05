@@ -1,5 +1,6 @@
 import React from 'react';
 import { useGetPostByIdQuery } from '../features/api/apiSlice';
+import EditPost from './EditPost';
 
 const Post = ({ id }) => {
 
@@ -20,6 +21,9 @@ const Post = ({ id }) => {
             <p>{post?.body}</p>
             <br />
             <p><strong>Post ID:</strong> {post?.id}</p>
+            <div>
+                {id && <EditPost post={post} />}
+            </div>
         </div>
     );
 };
